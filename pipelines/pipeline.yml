@@ -1,0 +1,6 @@
+workflow:
+  - action: python
+    code_dir: /usr/local/airflow/dags
+    command: >-
+              bike-sharing/scripts/data_pipeline_executor.py
+              --conf_file /usr/local/airflow/resource/config.ini

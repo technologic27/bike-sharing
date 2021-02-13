@@ -1,0 +1,14 @@
+{
+	"rf": {
+		"n_estimators": range(20, 81, 10),
+		"bootstrap": ['False'],
+		"n_estimators": range(20, 81, 10)
+	},
+	"lr": {
+		"max_depth": range(1, 10),
+		"min_samples_leaf": [10, 20, 50, 100]
+	},
+	"gb": {
+		"n_estimators": range(20, 81, 10)
+	}
+}

@@ -1,0 +1,10 @@
+psycopg2-binary
+pandas
+configparser<3.6.0,>=3.5.0
+numpy
+scikit-learn
+notebook
+seaborn
+click
+jupyter
+regressor

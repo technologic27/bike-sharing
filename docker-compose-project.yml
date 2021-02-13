@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+    postgres:                                           # create postgres container
+        image: postgres:10.0-alpine
+        container_name: postgres
+        environment:
+          - POSTGRES_USER=root
+          - POSTGRES_PASSWORD=password
+        ports:
+            - 5432:5432
+
+    mlflow:                                             # create a MLFlow container
+        build: './mlflow_docker'                        # construct the container along the Dockerfile in this folder
+        container_name: mlflow_container
+        ports:
+            - "5000:5000"                               # expose port
+        command: 'mlflow server --backend-store-uri ./mlflow --host 0.0.0.0 --port 5000'
